@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: web-color
+  name: webcolor
   namespace: argocd
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.src
   project: default
   source:
-    path: .
+    path: k8s
     repoURL: 'https://github.com/dellabeneta/test-k8s-green-blue.git'
     targetRevision: HEAD
   syncPolicy:
